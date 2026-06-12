@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 08 - Box Model</title>
+    <style>
+        /* Fundo da galeria - seletor body */
+        body {
+            background-color: #F5F5DC;
+            font-family: "opensans-regular", arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Classe notícia - Box Model */
+        .noticia {
+            font-family: "opensans-regular", arial, sans-serif;
+            background-color: #F5F5DC;
+            border: 1px solid black;
+            color: #333;
+            font-size: 16px;
+            width: 500px;
+            padding-left: 15px;
+            padding-right: 10px;
+            text-align: justify;
+            line-height: 24px;
+            margin: 20px;
+        }
+
+        /* Título da notícia */
+        .noticia h1 {
+            color: #c4170c;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 8px;
+        }
+
+        /* Classe imagem para elementos flutuantes */
+        .imagem {
+            padding: 10px;
+        }
+
+        /* Imagem flutuando à esquerda */
+        .esquerda {
+            float: left;
+        }
+
+        /* Imagem flutuando à direita */
+        .direita {
+            float: right;
+        }
+
+        /* Parágrafo da notícia - com clear para não contornar a imagem */
+        .noticia p {
+            clear: both;
+        }
+
+        /* Estilos para a galeria */
+        .galeria {
+            margin-top: 40px;
+        }
+
+        .galeria h2 {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: #c4170c;
+        }
+
+        /* Flexbox na galeria */
+        .flex-galeria {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .flex-galeria img {
+            width: 200px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Primeira notícia -->
+    <div class="noticia">
+        <h1>Título da Notícia 1</h1>
+        <div class="imagem esquerda">
+            <img src="https://hilab.com.br/wp-content/uploads/2021/01/teste-covid-antigeno-o-que-e-1.jpg" alt="Imagem" width="150">
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
+
+    <!-- Segunda notícia -->
+    <div class="noticia">
+        <h1>Título da Notícia 2</h1>
+        <div class="imagem direita">
+            <img src="https://s5.static.brasilescola.uol.com.br/be/2022/02/solo-coberto-plastico.jpg" alt="Imagem" width="150">
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
+
+    <!-- Terceira notícia (sem imagem) -->
+    <div class="noticia">
+        <h1>Título da Notícia 3</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+
+    <!-- Exercício: Galeria de Imagens com Flexbox -->
+    <div class="galeria">
+        <h2>Galeria de Imagens</h2>
+        <div class="flex-galeria">
+            <img src="imagens/imagem1.png" alt="Imagem 1" onerror="this.src='https://via.placeholder.com/200'">
+            <img src="imagens/imagem2.png"Imagem 2" onerror="this.src='https://via.placeholder.com/200'">
+            <img src="imagens/imagem3.png" alt="Imagem 3" onerror="this.src='https://via.placeholder.com/200'">
+            <img src="imagens/imagem4.png" alt="Imagem 4" onerror="this.src='https://via.placeholder.com/200'">
+            <img src="imagens/imagem5.png" alt="Imagem 5" onerror="this.src='https://via.placeholder.com/200'">
+            <img src="imagens/noticia.jpg" alt="Imagem 6" onerror="this.src='https://via.placeholder.com/200'">
+        </div>
+    </div>
+
+</body>
+</html>
