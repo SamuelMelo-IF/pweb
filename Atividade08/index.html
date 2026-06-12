@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 08 - Box Model</title>
     <style>
-        /* Fundo da galeria - seletor body */
         body {
             background-color: #F5F5DC;
             font-family: "opensans-regular", arial, sans-serif;
@@ -13,7 +12,6 @@
             padding: 20px;
         }
 
-        /* Classe notícia - Box Model */
         .noticia {
             font-family: "opensans-regular", arial, sans-serif;
             background-color: #F5F5DC;
@@ -28,39 +26,34 @@
             margin: 20px;
         }
 
-        /* Título da notícia */
         .noticia h1 {
             color: #c4170c;
             font-family: "Helvetica Neue", Arial, sans-serif;
             margin: 8px;
         }
 
-        /* Classe imagem para elementos flutuantes */
         .imagem {
             padding: 10px;
         }
 
-        /* Imagem flutuando à esquerda */
         .esquerda {
             float: left;
         }
 
-        /* Imagem flutuando à direita */
         .direita {
             float: right;
         }
 
-        /* Parágrafo da notícia - com clear para não contornar a imagem */
         .noticia p {
             clear: both;
         }
 
-        /* Estilos para a galeria */
         .galeria {
             margin-top: 40px;
             background-color: #e0e0e0;
             padding: 20px;
             border-radius: 5px;
+            width: fit-content;
         }
 
         .galeria h2 {
@@ -68,24 +61,38 @@
             color: #c4170c;
         }
 
-        /* Flexbox na galeria */
         .flex-galeria {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        .flex-galeria img {
-            width: 200px;
-            border: 1px solid black;
-            padding: 5px;
+        .item-galeria {
             background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+        }
+
+        .item-galeria img {
+            width: 130px;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .item-galeria span {
+            display: block;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <!-- Primeira notícia -->
     <div class="noticia">
         <h1>Título da Notícia 1</h1>
         <div class="imagem esquerda">
@@ -98,7 +105,6 @@
         </p>
     </div>
 
-    <!-- Segunda notícia -->
     <div class="noticia">
         <h1>Título da Notícia 2</h1>
         <div class="imagem esquerda">
@@ -111,27 +117,35 @@
         </p>
     </div>
 
-    <!-- Terceira notícia (sem imagem) -->
-    <div class="noticia">
-        <h1>Título da Notícia 3</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-    </div>
-
-    <!-- Exercício: Galeria de Imagens com Flexbox -->
     <div class="galeria">
         <h2>Galeria de Imagens</h2>
         <div class="flex-galeria">
-            <img src="imagens/imagem1.png" alt="Imagem 1" onerror="this.src='https://via.placeholder.com/200'">
-            <img src="imagens/imagem2.png"Imagem 2" onerror="this.src='https://via.placeholder.com/200'">
-            <img src="imagens/imagem3.png" alt="Imagem 3" onerror="this.src='https://via.placeholder.com/200'">
-            <img src="imagens/imagem4.png" alt="Imagem 4" onerror="this.src='https://via.placeholder.com/200'">
-            <img src="imagens/imagem5.png" alt="Imagem 5" onerror="this.src='https://via.placeholder.com/200'">
-            <img src="imagens/noticia.jpg" alt="Imagem 6" onerror="this.src='https://via.placeholder.com/200'">
+            <div class="item-galeria">
+                <img src="imagens/imagem1.png" alt="Imagem 1" onerror="this.src='https://via.placeholder.com/130x100'">
+                <span>Imagem 1</span>
+            </div>
+            <div class="item-galeria">
+                <img src="imagens/imagem2.png" alt="Imagem 2" onerror="this.src='https://via.placeholder.com/130x100'">
+                <span>Imagem 2</span>
+            </div>
+            <div class="item-galeria">
+                <img src="imagens/imagem3.png" alt="Imagem 3" onerror="this.src='https://via.placeholder.com/130x100'">
+                <span>Imagem 3</span>
+            </div>
+            <div class="item-galeria">
+                <img src="imagens/imagem4.png" alt="Imagem 4" onerror="this.src='https://via.placeholder.com/130x100'">
+                <span>Imagem 4</span>
+            </div>
+            <div class="item-galeria">
+                <img src="imagens/imagem5.png" alt="Imagem 5" onerror="this.src='https://via.placeholder.com/130x100'">
+                <span>Imagem 5</span>
+            </div>
+            <div class="item-galeria">
+                <img src="imagens/noticia.jpg" alt="Imagem 6" onerror="this.src='https://via.placeholder.com/130x100'">
+                <span>Imagem 6</span>
+            </div>
         </div>
-         <p>
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
