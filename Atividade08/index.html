@@ -40,38 +40,53 @@
             float: left;
         }
 
+        .direita {
+            float: right;
+        }
+
         .noticia p {
             clear: both;
         }
 
+        /* GALERIA CORRIGIDA */
+
         .galeria {
             margin-top: 40px;
             background-color: #e0e0e0;
-            padding: 20px;
+            padding: 10px;
+            width: 550px;
+            overflow: auto;
         }
 
-        .grid-resumo {
+        .flex-galeria {
             display: flex;
-            gap: 20px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            gap: 10px;
         }
 
-        .card-resumo {
-            background-color: #d3d3d3;
-            padding: 30px 20px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-            flex: 1;
-            min-width: 100px;
+        .item-galeria {
+            background-color: white;
+            border: 1px solid #c0c0c0;
+            width: 160px;
+            height: 170px;
+            padding: 5px;
+            text-align: left;
+            box-sizing: border-box;
         }
 
-        .texto-rodape {
-            background-color: #d3d3d3;
-            padding: 15px;
-            text-align: justify;
-            line-height: 1.5;
+        .item-galeria img {
+            width: 148px;
+            height: 110px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .item-galeria span {
+            display: block;
+            font-family: serif;
+            font-size: 12px;
+            color: #333;
         }
     </style>
 </head>
@@ -102,16 +117,47 @@
     </div>
 
     <div class="galeria">
-        <div class="grid-resumo">
-            <div class="card-resumo">Resumo</div>
-            <div class="card-resumo">Resumo</div>
-            <div class="card-resumo">Resumo</div>
-            <div class="card-resumo">Resumo</div>
-            <div class="card-resumo">Resumo</div>
+
+        <div class="flex-galeria">
+
+            <div class="item-galeria">
+                <img src="imagens/imagem1.png" alt="Imagem 1" onerror="this.src='https://via.placeholder.com/148x110'">
+                <span>Resumo</span>
+            </div>
+
+            <div class="item-galeria">
+                <img src="imagens/imagem2.png" alt="Imagem 2" onerror="this.src='https://via.placeholder.com/148x110'">
+                <span>Resumo</span>
+            </div>
+
+            <div class="item-galeria">
+                <img src="imagens/imagem3.png" alt="Imagem 3" onerror="this.src='https://via.placeholder.com/148x110'">
+                <span>Resumo</span>
+            </div>
+
+            <div class="item-galeria">
+                <img src="imagens/imagem4.png" alt="Imagem 4" onerror="this.src='https://via.placeholder.com/148x110'">
+                <span>Resumo</span>
+            </div>
+
+            <div class="item-galeria">
+                <img src="imagens/imagem5.png" alt="Imagem 5" onerror="this.src='https://via.placeholder.com/148x110'">
+                <span>Resumo</span>
+            </div>
+
+            <div class="item-galeria">
+                <img src="imagens/noticia.jpg" alt="Imagem 6" onerror="this.src='https://via.placeholder.com/148x110'">
+                <span>Resumo</span>
+            </div>
+
         </div>
-        <div class="texto-rodape">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et nulla luctus feugiat est sed, sollicitudin urna. Mauris euismod porta aliquam. Mauris ut justo ut est consectetur rhoncus. Duis vel volutpat nisl. Etiam tortor nunc, efficitur non sapien ac, fringilla imperdiet dui. Nam blandit leo non justo euismod facilisis. Donec imperdiet quam blandit nunc elementum aliquam. Duis interdum dolor at placerat sodales. Aenean dui mi, congue ac pellentesque at, porta vitae elit. Maecenas non elementum nisl, a posuere nunc. Aenean scelerisque libero sed orci vulputate, quis auctor purus consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et nulla luctus, feugiat est sed, sollicitudin urna. Mauris euismod porta aliquam. Mauris ut justo ut est consectetur rhoncus. Duis vel volutpat nisl. Etiam tortor nunc, efficitur non sapien ac, fringilla imperdiet dui. Nam blandit leo non justo euismod facilisis. Donec imperdiet
-        </div>
+
+        <p style="clear: both;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+
     </div>
 
 </body>
