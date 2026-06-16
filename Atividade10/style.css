@@ -1,0 +1,65 @@
+
+body{
+    background-color: #eee;
+    font-family: serif;
+}
+
+
+h1{
+    margin-left: 50px;
+    color: #005f5f;
+    text-shadow: 2px 2px 3px gray;
+}
+
+
+.container-body{
+    width: 900px;
+    height: 450px;
+    background: linear-gradient(to right, #66cdaa, #5fbf91);
+    margin: 40px;
+    position: relative;
+}
+
+
+.fixo{
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    position: fixed;
+    top: 170px;
+    left: 260px;
+}
+
+
+.absoluto{
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    position: absolute;
+    bottom: 120px;
+    left: 40px;
+}
+
+
+.container-div{
+    width: 420px;
+    height: 200px;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+
+.relativo{
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
