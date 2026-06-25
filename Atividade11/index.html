@@ -1,162 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Postagens</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal de Notícias</title>
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
 
-        section{
-            max-width: 800px;
-            margin: auto;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        article{
-            background: white;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
 
-        h2{
-            color: #a6c63a;
-            margin-bottom: 5px;
-        }
+header{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-        time{
-            display: block;
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
+.container{
+    display:flex;
+    width:95%;
+    margin:20px auto;
+    gap:20px;
+}
 
-        .conteudo{
-            gap: 15px;
-        }
+/* MENU */
+nav{
+    width:20%;
+    background:white;
+    border:1px solid #ccc;
+    padding:15px;
+}
 
-        .conteudo img{
-            width: 180px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 5px;
+nav h3{
+    margin-bottom:10px;
+}
 
-            float: left;
-            margin-right: 15px;
-            margin-bottom: 10px;
-        }
+nav ul{
+    list-style:none;
+}
 
-        .texto{
-            text-align: justify;
-        }
+nav li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+}
 
-        aside{
-            margin-top: 10px;
-            padding-left: 10px;
-            border-left: 4px solid #ccc;
-            color: #444;
-            font-style: italic;
-        }
-    </style>
+/* ÁREA DAS NOTÍCIAS */
+section{
+    width:60%;
+}
+
+article{
+    background:white;
+    border:1px solid #ccc;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+article h2{
+    color:#9dbb2f;
+    margin-bottom:5px;
+}
+
+time{
+    display:block;
+    color:#666;
+    margin-bottom:10px;
+}
+
+article img{
+    width:180px;
+    height:120px;
+    float:left;
+    margin-right:15px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+article p{
+    text-align:justify;
+}
+
+.autor{
+    clear:both;
+    margin-top:15px;
+    padding-left:10px;
+    border-left:4px solid #ccc;
+    font-style:italic;
+}
+
+/* PROPAGANDAS */
+aside{
+    width:20%;
+    background:white;
+    border:1px solid #ccc;
+    padding:15px;
+}
+
+aside h3{
+    margin-bottom:15px;
+}
+
+.banner{
+    margin-bottom:15px;
+}
+
+.banner img{
+    width:100%;
+    border:1px solid #ddd;
+}
+
+/* RODAPÉ */
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
 </head>
 <body>
 
-<section>
+<header>
+    <h1>Portal de Notícias</h1>
+</header>
 
-    <article>
-        <h2>Título da Postagem 1</h2>
+<div class="container">
 
-        <time datetime="2025-06-25">
-            Postado em 25 de junho de 2025
-        </time>
+    <nav>
+        <h3>Categorias</h3>
+        <ul>
+            <li>Carros</li>
+            <li>Ciência</li>
+            <li>Economia</li>
+            <li>Educação</li>
+        </ul>
+    </nav>
 
-        <div class="conteudo">
-            <img src="https://picsum.photos/300/200?random=1" alt="Imagem da postagem">
+    <section>
 
-            <div class="texto">
-                <p>
-                    Esta é uma postagem de exemplo utilizando a tag
-                    <strong>article</strong>. O conteúdo pode conter textos,
-                    informações e imagens relacionadas ao tema abordado. Esta é uma postagem de exemplo utilizando a tag
-                    <strong>article</strong>. O conteúdo pode conter textos,
-                    informações e imagens relacionadas ao tema abordado.Esta é uma postagem de exemplo utilizando a tag
-                    <strong>article</strong>. O conteúdo pode conter textos,
-                    informações e imagens relacionadas ao tema abordado.Esta é uma postagem de exemplo utilizando a tag
-                    <strong>article</strong>. O conteúdo pode conter textos,
-                    informações e imagens relacionadas ao tema abordado.
-                </p>
+        <article>
+            <h2>Título da Postagem 1</h2>
+            <time datetime="2025-06-25">
+                Postado em 25 de junho de 2025
+            </time>
+
+            <img src="https://picsum.photos/300/200?random=1">
+
+            <p>
+                Esta é uma postagem de exemplo utilizando a tag article.
+                O conteúdo pode conter textos, informações e imagens
+                relacionadas ao tema abordado. Esta é uma postagem de exemplo
+                utilizando a tag article. O conteúdo pode conter textos,
+                informações e imagens relacionadas ao tema abordado.
+            </p>
+
+            <div class="autor">
+                Autor: Samuel Melo
             </div>
+        </article>
+
+        <article>
+            <h2>Título da Postagem 2</h2>
+            <time datetime="2025-06-20">
+                Postado em 20 de junho de 2025
+            </time>
+
+            <img src="https://picsum.photos/300/200?random=2">
+
+            <p>
+                Outra postagem demonstrando o uso das tags semânticas do HTML5.
+                A organização do conteúdo melhora a acessibilidade e a estrutura
+                da página.
+            </p>
+
+            <div class="autor">
+                Autor: Maria Silva
+            </div>
+        </article>
+
+    </section>
+
+    <aside>
+        <h3>Publicidade</h3>
+
+        <div class="banner">
+            <img src="https://picsum.photos/200/300?random=10">
         </div>
 
-        <aside>
-            Autor: Samuel Melo
-        </aside>
-    </article>
-
-    <article>
-        <h2>Título da Postagem 2</h2>
-
-        <time datetime="2025-06-20">
-            Postado em 20 de junho de 2025
-        </time>
-
-        <div class="conteudo">
-            <img src="https://picsum.photos/300/200?random=2" alt="Imagem da postagem">
-
-            <div class="texto">
-                <p>
-                    Outra postagem demonstrando o uso das tags semânticas do
-                    HTML5. A organização do conteúdo melhora a acessibilidade
-                    e a estrutura da página. Outra postagem demonstrando o uso das tags semânticas do
-                    HTML5. A organização do conteúdo melhora a acessibilidade
-                    e a estrutura da página. Outra postagem demonstrando o uso das tags semânticas do
-                    HTML5. A organização do conteúdo melhora a acessibilidade
-                    e a estrutura da página.Outra postagem demonstrando o uso das tags semânticas do
-                    HTML5. A organização do conteúdo melhora a acessibilidade
-                    e a estrutura da página.
-                </p>
-            </div>
+        <div class="banner">
+            <img src="https://picsum.photos/200/300?random=11">
         </div>
+    </aside>
 
-        <aside>
-            Autor: Maria Silva
-        </aside>
-    </article>
+</div>
 
-    <article>
-        <h2>Título da Postagem 3</h2>
-
-        <time datetime="2025-06-15">
-            Postado em 15 de junho de 2025
-        </time>
-
-        <div class="conteudo">
-            <img src="https://picsum.photos/300/200?random=3" alt="Imagem da postagem">
-
-            <div class="texto">
-                <p>
-                    Este exemplo utiliza imagens, data de publicação e autor,
-                    conforme solicitado na atividade. Este exemplo utiliza imagens, data de publicação e autor,
-                    conforme solicitado na atividade. Este exemplo utiliza imagens, data de publicação e autor,
-                    conforme solicitado na atividade. Este exemplo utiliza imagens, data de publicação e autor,
-                    conforme solicitado na atividade. Este exemplo utiliza imagens, data de publicação e autor,
-                    conforme solicitado na atividade.
-                </p>
-            </div>
-        </div>
-
-        <aside>
-            Autor: João Pereira
-        </aside>
-    </article>
-
-</section>
+<footer>
+    © 2025 Portal de Notícias - Exercício HTML5 Semântico
+</footer>
 
 </body>
 </html>
