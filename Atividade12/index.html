@@ -6,19 +6,23 @@
     <title>Atividade 12 - Atributo Data</title>
 
     <style>
+        /* Estilo padrão (Vermelho) */
         .pessoa {
             color: red;
             cursor: pointer;
         }
 
+        /* Cor azul para quem tem idade igual a 30 */
         .pessoa[data-idade='30'] {
             color: blue;
         }
 
+        /* Injeta "Nome: " antes do texto do elemento HTML */
         .pessoa::before {
             content: 'Nome: ';
         }
 
+        /* Injeta " - Idade: [valor] Anos - C.P.F: [valor]" depois do texto do elemento */
         .pessoa::after {
             content: ' - Idade: ' attr(data-idade) ' Anos - C.P.F: ' attr(data-cpf);
         }
@@ -26,8 +30,8 @@
 
     <script type="text/javascript">
     function mostravalor(componente){
-        var nome = componente.firstChild.nodeValue; 
-        alert("Atividade 12: " + nome);
+        var valor = componente.textContent;
+        alert(valor);
     }
     </script>
 </head>
