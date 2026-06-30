@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 13</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .container{
+            width: 600px;
+            margin: 40px auto;
+        }
+
+        .box{
+            background: white;
+            padding: 20px;
+            border: 2px solid #333;
+
+            /* Border Radius */
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+
+            margin-bottom: 30px;
+        }
+
+        fieldset{
+            padding: 20px;
+        }
+
+        legend{
+            font-weight: bold;
+        }
+
+        input{
+            width: 100%;
+            padding: 8px;
+
+            /* Box Sizing */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        button{
+            padding: 10px 20px;
+        }
+
+        .caixa{
+            width: 300px;
+            padding: 30px;
+            border: 10px solid #1e90ff;
+            background: #d9ecff;
+
+            /* Box Sizing */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            /* Border Radius */
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+            <fieldset>
+                <legend>Cadastro</legend>
+
+                <label>Nome:</label><br>
+                <input type="text" placeholder="Digite seu nome"><br><br>
+
+                <label>Email:</label><br>
+                <input type="email" placeholder="Digite seu e-mail"><br><br>
+
+                <button>Enviar</button>
+            </fieldset>
+        </div>
+
+        <div class="caixa">
+            Demonstração da propriedade <strong>box-sizing</strong> e <strong>border-radius</strong>.
+        </div>
+
+    </div>
+
+</body>
+</html>
