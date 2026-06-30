@@ -87,8 +87,10 @@
 
         .flor{
             width: 200px;
-            display: flex;
-            flex-wrap: wrap;
+            height: 200px;
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px;
         }
 
         .petala{
@@ -96,35 +98,34 @@
             height: 100px;
         }
 
-        .vermelho{
+        .flor .vermelho{
             background: red;
-            border-radius: 100px 0 100px 0;
+            border-radius: 70% 0 70% 70%;
         }
 
-        .laranja{
+        .flor .laranja{
             background: orange;
-            border-radius: 0 100px 0 100px;
+            border-radius: 0 70% 70% 70%;
         }
 
-        .verde{
+        .flor .verde{
             background: green;
-            border-radius: 0 100px 0 100px;
-            transform: rotate(180deg);
+            border-radius: 70% 70% 70% 0;
         }
 
-        .roxo{
+        .flor .roxo{
             background: purple;
-            border-radius: 100px 0 100px 0;
-            transform: rotate(180deg);
+            border-radius: 70% 70% 0 70%;
         }
 
-        /* Círculo */
+                /* Círculo */
 
         .circulo{
             width: 200px;
             height: 200px;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px;
         }
 
         .quadrante{
@@ -133,21 +134,23 @@
         }
 
         .circulo .vermelho{
-            border-radius: 100px 0 0 0;
+            background: red;
+            border-radius: 100% 0 0 0;
         }
 
         .circulo .laranja{
-            border-radius: 0 100px 0 0;
+            background: orange;
+            border-radius: 0 100% 0 0;
         }
 
         .circulo .verde{
-            border-radius: 0 0 0 100px;
-            transform: none;
+            background: green;
+            border-radius: 0 0 0 100%;
         }
 
         .circulo .roxo{
-            border-radius: 0 0 100px 0;
-            transform: none;
+            background: purple;
+            border-radius: 0 0 100% 0;
         }
     </style>
 </head>
@@ -172,6 +175,26 @@
 
         <div class="caixa">
             Demonstração da propriedade <strong>box-sizing</strong> e <strong>border-radius</strong>.
+        </div>
+
+        <h2>Exercício</h2>
+
+        <div class="figuras">
+
+            <div class="flor">
+                <div class="petala vermelho"></div>
+                <div class="petala laranja"></div>
+                <div class="petala verde"></div>
+                <div class="petala roxo"></div>
+            </div>
+
+            <div class="circulo">
+                <div class="quadrante vermelho"></div>
+                <div class="quadrante laranja"></div>
+                <div class="quadrante verde"></div>
+                <div class="quadrante roxo"></div>
+            </div>
+
         </div>
 
     </div>
