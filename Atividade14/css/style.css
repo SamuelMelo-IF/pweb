@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 14</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f2f2f2;
+            text-align:center;
+            padding:30px;
+        }
+
+        h1{
+            margin-bottom:30px;
+            color:#222;
+            text-shadow:3px 3px 5px gray;
+        }
+
+        h2{
+            margin:25px 0 15px;
+        }
+
+        .box{
+            width:300px;
+            height:180px;
+            margin:20px auto;
+            border:2px solid #000;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:20px;
+        }
+
+        .opacity{
+            background:#4CAF50;
+            opacity:0.6;
+        }
+
+        .opacity img{
+            width:120px;
+        }
+
+        .rgba{
+            background:rgba(0, 0, 255, 0.4);
+            color:#000;
+        }
+
+        .sombra{
+            background:white;
+            box-shadow:8px 8px 15px rgba(0,0,0,0.5);
+        }
+
+        .gradiente-linear{
+            background:linear-gradient(to right, red, orange, yellow, green, blue);
+        }
+
+        .gradiente-radial{
+            background:radial-gradient(circle, yellow, orange, red);
+        }
+    </style>
+</head>
+
+<body>
+        <h1>Transparências, Sombras e Gradientes</h1>
+
+        <h2>Transparência (Opacity)</h2>
+
+        <div class="box opacity">
+            <img src="img/camera.png" alt="Câmera">
+        </div>
+
+        <h2>Transparência usando RGBA</h2>
+
+        <div class="box rgba">
+            <p>Exemplo usando RGBA.</p>
+        </div>
+
+        <h2>Sombras</h2>
+
+        <div class="box sombra">
+            Caixa com sombra
+        </div>
+
+        <h2>Gradiente Linear</h2>
+
+        <div class="box gradiente-linear"></div>
+
+        <h2>Gradiente Radial</h2>
+
+        <div class="box gradiente-radial"></div>
+
+</body>
+</html>
