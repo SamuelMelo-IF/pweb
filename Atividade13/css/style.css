@@ -1,203 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio CSS3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      margin: 40px;
+      text-align: center;
+    }
 
-    <title>Atividade 13</title>
 
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="normalize.css">
+    h1 {
+      margin-bottom: 40px;
+    }
 
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f4f4;
-        }
 
-        .container{
-            width: 600px;
-            margin: 40px auto;
-        }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+      margin-top: 20px;
+    }
 
-        .box{
-            background: white;
-            padding: 20px;
-            border: 2px solid #333;
 
-            /* Border Radius */
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
+    .flor {
+      width: 240px;
+      height: 240px;
+      display: grid;
+      grid-template-columns: 120px 120px;
+      grid-template-rows: 120px 120px;
+    }
 
-            margin-bottom: 30px;
-        }
 
-        fieldset{
-            padding: 20px;
-        }
+    .petala {
+      width: 120px;
+      height: 120px;
+    }
 
-        legend{
-            font-weight: bold;
-        }
 
-        input{
-            width: 100%;
-            padding: 8px;
+    .p1 {
+      background: red;
+      border-radius: 60% 60% 0 60%;
+    }
 
-            /* Box Sizing */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
 
-        button{
-            padding: 10px 20px;
-        }
+    .p2 {
+      background: orange;
+      border-radius: 60% 60% 60% 0;
+    }
 
-        .caixa{
-            width: 300px;
-            padding: 30px;
-            border: 10px solid #1e90ff;
-            background: #d9ecff;
 
-            /* Box Sizing */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    .p3 {
+      background: green;
+      border-radius: 60% 0 60% 60%;
+    }
 
-            /* Border Radius */
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            border-radius: 30px;
 
-            text-align: center;
-            font-weight: bold;
-            margin-top: 30px;
-        }
+    .p4 {
+      background: purple;
+      border-radius: 0 60% 60% 60%;
+    }
 
-        .figuras{
-            display: flex;
-            gap: 50px;
-            justify-content: center;
-            margin-top: 40px;
-        }
 
-        /* Flor */
+    .circulo {
+      width: 240px;
+      height: 240px;
+      display: grid;
+      grid-template-columns: 120px 120px;
+      grid-template-rows: 120px 120px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
 
-        .flor{
-            width: 200px;
-            height: 200px;
-            display: grid;
-            grid-template-columns: 100px 100px;
-            grid-template-rows: 100px 100px;
-        }
 
-        .petala{
-            width: 100px;
-            height: 100px;
-        }
+    .parte {
+      width: 120px;
+      height: 120px;
+    }
 
-        .flor .vermelho{
-            background: red;
-            border-radius: 70% 0 70% 70%;
-        }
 
-        .flor .laranja{
-            background: orange;
-            border-radius: 0 70% 70% 70%;
-        }
-
-        .flor .verde{
-            background: green;
-            border-radius: 70% 70% 70% 0;
-        }
-
-        .flor .roxo{
-            background: purple;
-            border-radius: 70% 70% 0 70%;
-        }
-
-                /* Círculo */
-
-        .circulo{
-            width: 200px;
-            height: 200px;
-            display: grid;
-            grid-template-columns: 100px 100px;
-            grid-template-rows: 100px 100px;
-        }
-
-        .quadrante{
-            width: 100px;
-            height: 100px;
-        }
-
-        .circulo .vermelho{
-            background: red;
-            border-radius: 100% 0 0 0;
-        }
-
-        .circulo .laranja{
-            background: orange;
-            border-radius: 0 100% 0 0;
-        }
-
-        .circulo .verde{
-            background: green;
-            border-radius: 0 0 0 100%;
-        }
-
-        .circulo .roxo{
-            background: purple;
-            border-radius: 0 0 100% 0;
-        }
-    </style>
+    .vermelha { background: red; }
+    .amarela { background: orange; }
+    .verde { background: green; }
+    .roxa { background: purple; }
+  </style>
 </head>
-
 <body>
 
-    <div class="container">
 
-        <div class="box">
-            <fieldset>
-                <legend>Cadastro</legend>
+  <h1>Desafio CSS3</h1>
 
-                <label>Nome:</label><br>
-                <input type="text" placeholder="Digite seu nome"><br><br>
 
-                <label>Email:</label><br>
-                <input type="email" placeholder="Digite seu e-mail"><br><br>
-
-                <button>Enviar</button>
-            </fieldset>
-        </div>
-
-        <div class="caixa">
-            Demonstração da propriedade <strong>box-sizing</strong> e <strong>border-radius</strong>.
-        </div>
-
-        <h2>Exercício</h2>
-
-        <div class="figuras">
-
-            <div class="flor">
-                <div class="petala vermelho"></div>
-                <div class="petala laranja"></div>
-                <div class="petala verde"></div>
-                <div class="petala roxo"></div>
-            </div>
-
-            <div class="circulo">
-                <div class="quadrante vermelho"></div>
-                <div class="quadrante laranja"></div>
-                <div class="quadrante verde"></div>
-                <div class="quadrante roxo"></div>
-            </div>
-
-        </div>
-
+  <div class="container">
+    <div class="flor">
+      <div class="petala p1"></div>
+      <div class="petala p2"></div>
+      <div class="petala p3"></div>
+      <div class="petala p4"></div>
     </div>
+
+
+    <div class="circulo">
+      <div class="parte vermelha"></div>
+      <div class="parte amarela"></div>
+      <div class="parte verde"></div>
+      <div class="parte roxa"></div>
+    </div>
+  </div>
+
+
+  <a href="index.html">Voltar</a>
+
 
 </body>
 </html>

@@ -10,66 +10,52 @@
     <link rel="stylesheet" href="normalize.css">
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        .box {
+            background: url(../img/camera.png);
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            box-sizing: border-box;
+            padding: 10px;
+            box-shadow: 10px 10px 5px #888888;
         }
 
-        body{
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f2f2f2;
-            text-align:center;
-            padding:30px;
+
+        .box h1 {
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 0 10px 0;
+            padding: 5px;
+            text-shadow: 3px 3px 3px rgb(255, 0, 0);
         }
 
-        h1{
-            margin-bottom:30px;
-            color:#222;
-            text-shadow:3px 3px 5px gray;
+
+        .box p {
+            margin: 0;
+            color: #000;
+            font-weight: bold;
         }
 
-        h2{
-            margin:25px 0 15px;
+
+        .container-sombras {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px;
+            background-color: #f0f4f8;
         }
 
-        .box{
-            width:300px;
-            height:180px;
-            margin:20px auto;
-            border:2px solid #000;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-size:20px;
+
+        .caixa-sombra {
+            width: 450px;
+            height: 180px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
         }
 
-        .opacity{
-            background:#4CAF50;
-            opacity:0.6;
-        }
-
-        .opacity img{
-            width:120px;
-        }
-
-        .rgba{
-            background:rgba(0, 0, 255, 0.4);
-            color:#000;
-        }
-
-        .sombra{
-            background:white;
-            box-shadow:8px 8px 15px rgba(0,0,0,0.5);
-        }
-
-        .gradiente-linear{
-            background:linear-gradient(to right, red, orange, yellow, green, blue);
-        }
-
-        .gradiente-radial{
-            background:radial-gradient(circle, yellow, orange, red);
-        }
     </style>
 </head>
 
