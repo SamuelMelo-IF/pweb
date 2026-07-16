@@ -3,60 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="normalize.css">
-
-    <!-- CSS -->
+    <title>CSS3</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <link rel="stylesheet" href="style.css">
-
-    <title>Atividade 13</title>
 </head>
 <body>
 
-    <div class="container">
+    <h1>Introdução ao CSS3</h1>
 
-        <div class="box">
-            <fieldset>
-                <legend>Cadastro</legend>
+    <div class="box">
+        <fieldset>
+            <legend>Cadastro</legend>
 
-                <label>Nome:</label><br>
-                <input type="text"><br><br>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome"><br><br>
 
-                <label>Email:</label><br>
-                <input type="email"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email"><br><br>
 
-                <button>Enviar</button>
-
-            </fieldset>
-        </div>
-
-        <div class="caixa">
-            Demonstração do Box Sizing
-        </div>
-
+            <button>Enviar</button>
+        </fieldset>
     </div>
 
+    <h2>Exemplo de Box Sizing</h2>
 
-    <h2>Exercício</h2>
-
-    <div class="figuras">
-
-        <div class="flor">
-            <div class="petala vermelho"></div>
-            <div class="petala laranja"></div>
-            <div class="petala verde"></div>
-            <div class="petala roxo"></div>
-        </div>
-
-        <div class="circulo">
-            <div class="quadrante vermelho"></div>
-            <div class="quadrante laranja"></div>
-            <div class="quadrante verde"></div>
-            <div class="quadrante roxo"></div>
-        </div>
-
+    <div class="caixa content-box">
+        Caixa com <strong>content-box</strong>
     </div>
+
+    <div class="caixa border-box">
+        Caixa com <strong>border-box</strong>
+    </div>
+
+<a href="desafio.html">Ver desafio CSS3</a>
+<a href="../index.html">Voltar</a>
 
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 18 - Formulários e Tabelas</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5 bg-white p-5 rounded shadow-sm">
+        
+        <div class="row mb-5">
+            
+            <div class="col-sm-8">
+                <h1 class="mb-4">Cadastre-se</h1>
+                
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label font-weight-bold">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label font-weight-bold">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="senha" class="form-label font-weight-bold">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="termos">
+                        <label class="form-check-label" for="termos">
+                            Aceito os termos do serviço.
+                        </label>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcoes" id="php" value="php">
+                            <label class="form-check-label" for="php">PHP</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcoes" id="java" value="java">
+                            <label class="form-check-label" for="java">Java</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>
+                </form>
+            </div>
+
+            <div class="col-sm-4 border-start ps-4">
+                <h3 class="mb-4">Logar</h3>
+                
+                <form>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Digite seu e-mail">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Digite sua senha">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">Logar</button>
+                </form>
+            </div>
+
+        </div> <hr class="my-5">
+
+        <h2 class="mb-4">Lista de Produtos</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-sm border align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Notebook 980</td>
+                        <td>HP</td>
+                        <td>R$ 1.800,00</td>
+                    </tr>
+                    <tr>
+                        <td>MacBook Air</td>
+                        <td>Apple</td>
+                        <td>R$ 4.800,00</td>
+                    </tr>
+                    <tr>
+                        <td>HP Pavillon</td>
+                        <td>HP</td>
+                        <td>R$ 2.800,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

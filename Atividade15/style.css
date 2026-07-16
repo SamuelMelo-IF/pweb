@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 14</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: girarEMudarCor 10s linear infinite;
+        }
+
+        @keyframes girarEMudarCor {
+            0% {
+                transform: rotate(0deg);
+                background-color: red;
+            }
+            25% {
+                transform: rotate(90deg);
+                background-color: blue;
+            }
+            50% {
+                transform: rotate(180deg);
+                background-color: green;
+            }
+            75% {
+                transform: rotate(270deg);
+                background-color: orange;
+            }
+            100% {
+                transform: rotate(360deg);
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+</body>
+</html>

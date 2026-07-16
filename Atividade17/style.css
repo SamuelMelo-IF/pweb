@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 14</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <style>
+        .container-galeria {
+            max-width: 1200px;
+        }
+
+        .img-galeria {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+</body>
+</html>
