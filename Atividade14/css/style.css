@@ -10,118 +10,153 @@
     <link rel="stylesheet" href="normalize.css">
 
     <style>
-        .box {
-            background: url(../img/camera.png);
-            width: 300px;
-            height: 300px;
-            margin: 50px auto;
-            box-sizing: border-box;
-            padding: 10px;
-            box-shadow: 10px 10px 5px #888888; 
-        }
-
-        .box h1 {
-            background: rgba(255, 255, 255, 0.5); 
-            margin: 0 0 10px 0;
-            padding: 5px;
-            text-shadow: 3px 3px 3px rgb(255, 0, 0); 
-        }
-
-        .box p {
+        * {
             margin: 0;
-            color: #000;
-            font-weight: bold;
-        }
-
-        .container-sombras {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 40px;
-            background-color: #f0f4f8;
-        }
-
-        .caixa-sombra {
-            width: 450px;
-            height: 180px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        .borda-interna {
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0 15px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            opacity: 0.5;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-transparencia {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 0 auto 30px;
+            border: 2px solid #333;
+            overflow: hidden;
+        }
+
+        .box-transparencia img {
             width: 100%;
             height: 100%;
-            border: 2px dashed rgba(255, 255, 255, 0.8);
-            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .box-transparencia p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .box-sombra {
+            width: 400px;
+            padding: 30px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-sombra-exercicio {
+            width: 400px;
+            padding: 30px;
+            margin: 20px auto;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 
+                0 10px 20px rgba(0, 0, 0, 0.2),
+                0 6px 6px rgba(0, 0, 0, 0.2),
+                inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .box-gradiente-linear {
+            width: 400px;
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background: linear-gradient(to right, #ff6b6b, #4ecdc4);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-family: Arial, sans-serif;
-            font-size: 1.2em;
+            font-size: 18px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 20px;
         }
 
-        .shadow1 {
-            background-color: #e9968a;
-            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 
-                        0 1px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .shadow2 {
-            background-color: #ebd987;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 
-                        0 6px 6px rgba(0, 0, 0, 0.10);
-        }
-
-        .gradiente-linear {
+        .box-gradiente-radial {
             width: 400px;
-            height: 300px;
-            margin: 30px auto;
-            background: linear-gradient(45deg, #00c3ff, #cc00ff, #00ff00, #b32d00);
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background: radial-gradient(circle, #f7dc6f, #e74c3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 20px;
         }
-
-        .gradiente-radial {
-            width: 80%;
-            height: 150px;
-            margin: 30px auto;
-            background: radial-gradient(ellipse, red 0%, yellow 45%, green 100%);
-        }
-
     </style>
 </head>
 
 <body>
-        <h1>Transparências, Sombras e Gradientes</h1>
+    <!-- ========================================
+         CONTEÚDO DA PÁGINA
+         ======================================== -->
+    <h1>Transparências, Sombras e Gradientes</h1>
 
-        <h2>Transparência (Opacity)</h2>
+    <h2>1. Transparência (Opacity e RGBA)</h2>
 
-        <div class="box opacity">
-            <img src="img/camera.png" alt="Câmera">
-        </div>
+    <div class="box-transparencia">
+        <img src="img/camera.png" alt="Câmera">
+        <p>Texto sobre a imagem com fundo transparente (RGBA)</p>
+    </div>
 
-        <h2>Transparência usando RGBA</h2>
+    <h2>2. Sombras</h2>
 
-        <div class="box rgba">
-            <p>Exemplo usando RGBA.</p>
-        </div>
+    <div class="box-sombra">
+        Caixa com sombra simples
+    </div>
 
-        <h2>Sombras</h2>
+    <div class="box-sombra-exercicio">
+        Caixa com sombra múltipla
+    </div>
 
-        <div class="box sombra">
-            Caixa com sombra
-        </div>
+    <h2>3. Gradiente Linear</h2>
 
-        <h2>Gradiente Linear</h2>
+    <div class="box-gradiente-linear">
+        Gradiente Linear (esquerda → direita)
+    </div>
 
-        <div class="box gradiente-linear"></div>
+    <h2>4. Gradiente Radial</h2>
 
-        <h2>Gradiente Radial</h2>
-
-        <div class="box gradiente-radial"></div>
+    <div class="box-gradiente-radial">
+        Gradiente Radial (círculo)
+    </div>
 
 </body>
 </html>
